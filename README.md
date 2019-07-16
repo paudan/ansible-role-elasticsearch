@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-elasticsearch.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-elasticsearch)
 
-An Ansible Role that installs Elasticsearch on RedHat/CentOS or Debian/Ubuntu.
+An Ansible Role that installs Elasticsearch on RedHat/CentOS or Debian/Ubuntu. This fork basically adds modification for Elasticsearch 5.x installation under Debian/Ubuntu.
 
 ## Requirements
 
@@ -12,7 +12,7 @@ Requires at least Java 8. See [`geerlingguy.java`](https://github.com/geerlinggu
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    elasticsearch_version: '6.x'
+    elasticsearch_version: '5.x'
 
 The major version to use when installing Elasticsearch.
 
