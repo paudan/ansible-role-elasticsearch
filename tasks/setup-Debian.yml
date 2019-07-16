@@ -1,16 +1,9 @@
 ---
-- name: HTTPS APT transport for Elasticsearch repository.
+- name: HTTPS APT transport
   apt:
     name: apt-transport-https
     state: present
 
-- name: Add Elasticsearch apt key.
-  apt_key:
-    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
-    state: present
-
-- name: Add Elasticsearch repository.
-  apt_repository:
-    repo: 'deb https://artifacts.elastic.co/packages/{{ elasticsearch_version }}/apt stable main'
-    state: present
-    update_cache: true
+- name: Download last Elastic Search 5.x release
+  apt:
+    deb: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.16.deb
